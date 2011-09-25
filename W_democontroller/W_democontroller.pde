@@ -12,8 +12,8 @@ const byte button_pins[] =  { 3, 2 };           // what digital inputs are the b
 const byte button_notes[] = { MIDI_C, MIDI_D }; // what notes should the buttons play? 
 const byte num_buttons = sizeof(button_pins);
 
-const byte BUTTON_DOWN = LOW; // swap these if your buttons read "high" when pressed not "LOW"
-const byte BUTTON_UP = HIGH;
+const byte BUTTON_DOWN = HIGH; // swap these depending on whether your digital inputs go high or low when button is down
+const byte BUTTON_UP = LOW;
 
 
 const byte analog_pins[]       = { 1, 0, 5 }; // knob, knob, slider in this case
@@ -34,8 +34,10 @@ byte last_analog[num_analog]; // Last MIDI controller value we saw come in from 
 void setup() {
    for(int i = 0; i < num_buttons; i++) {
      pinMode(button_pins[i], INPUT); 
-     digitalWrite(button_pins[i], HIGH); // internal pullups on inputs
-   }
+     if(BUTTON_DOWN == LOW) {
+       digitalWrite(button_pins[i], HIGH); // internal pullups on inputs
+     }  
+ }
    Serial.begin(115200);
 }
 
