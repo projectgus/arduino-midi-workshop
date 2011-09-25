@@ -1,0 +1,33 @@
+What is this?
+=============
+
+These are some Arduino sketches, supporting libraries and other
+materials, created for a workshop called Drop Dead Simple MIDI
+Controllers with Arduino.
+
+More info at:
+
+http://electrofringe.net/2011/program2011/workshop2011/drop-dead-simple-midi-controllers-with-arduino/
+
+
+Supporting materials
+====================
+
+Hairless MIDI<->Serial Bridge (software program)
+projectgus.github.com/hairless-midiserial
+
+Introduction to Arduino comic (Jody Culkin)
+http://www.jodyculkin.com/comics-2/introduction-to-arduino
+
+
+Licensing & Reuse
+=================
+
+All the Arduino sketch sources and slides are Creative Commons (Attribution)
+licensed by Adam Thomas and/or Angus Gratton. Please distribute as you
+see fit, but please also mention where you got them.
+
+The libraries in the libraries/ folder are third party libraries,
+copyright by their owners and licensed under GPL as described in the
+relevant source files.
+
